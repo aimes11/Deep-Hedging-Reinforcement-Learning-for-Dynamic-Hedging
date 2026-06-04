@@ -43,15 +43,7 @@ The action corresponds to the number of shares traded at each hedging date.
 
 The wealth increment is defined as
 
-$$
-\Delta W_t
-=
-n_t(S_{t+1}-S_t)
--
-\text{Cost}(a_t)
-+
-\Delta V_t,
-$$
+$$ \Delta W_t=n_t(S_{t+1}-S_t)-\text{Cost}(a_t)+\Delta V_t, $$
 
 where:
 
