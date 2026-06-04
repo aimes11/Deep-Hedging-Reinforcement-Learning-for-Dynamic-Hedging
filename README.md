@@ -31,9 +31,9 @@ $$
 
 where:
 
-- \(S_t\) is the underlying price,
-- \(\tau_t\) is the remaining time to maturity,
-- \(n_t\) is the current stock inventory.
+- $S_t$ is the underlying price,
+- $\tau_t$ is the remaining time to maturity,
+- $n_t$ is the current stock inventory.
 
 The action corresponds to the number of shares traded at each hedging date.
 
@@ -43,7 +43,7 @@ The action corresponds to the number of shares traded at each hedging date.
 
 The wealth increment is defined as
 
-\[
+$$
 \Delta W_t
 =
 n_t(S_{t+1}-S_t)
@@ -51,26 +51,25 @@ n_t(S_{t+1}-S_t)
 \text{Cost}(a_t)
 +
 \Delta V_t,
-\]
+$$
 
 where:
 
-- \(n_t\) is the current inventory,
-- \(a_t\) is the trade executed,
-- \(\Delta V_t\) is the option price variation.
+- $n_t$ is the current inventory,
+- $a_t$ is the trade executed,
+- $\Delta V_t$ is the option price variation.
 
 The agent maximizes the risk-adjusted reward
 
-\[
+$$
 R_t
 =
 \Delta W_t
 -
 \frac{\kappa}{2}
-(\Delta W_t)^2,
-\]
+(\Delta W_t)^2$$
 
-where \(\kappa\) controls risk aversion.
+where $\kappa$ controls risk aversion.
 
 ---
 
@@ -85,20 +84,20 @@ The implementation uses:
 
 The Q-function is approximated as
 
-\[
+$$
 Q(S_t,\tau_t,n_t,a_t),
-\]
+$$
 
 and updated according to the Bellman recursion
 
-\[
+$$
 Q_t
 =
 R_t
 +
 \gamma
 Q(S_{t+1},\tau_{t+1},n_{t+1},a_{t+1}),
-\]
+$$
 
 where \(\gamma\) is the discount factor.
 
