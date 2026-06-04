@@ -25,9 +25,9 @@ The environment consists of:
 
 At each time step, the agent observes the state
 
-\[
+$
 (S_t,\tau_t,n_t)
-\]
+$
 
 where:
 
